@@ -6,6 +6,7 @@
 package br.com.guaraba.aberturadechamado.facade;
 
 import br.com.guaraba.aberturadechamado.modelo.Chamado;
+import java.util.Date;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -27,5 +28,11 @@ public class ChamadoFacade extends AbstractFacade<Chamado>{
 
     public ChamadoFacade() {
         super(Chamado.class);
+    }
+
+    @Override
+    public void create(Chamado chamado) {
+        chamado.setDataAbertura(new Date());
+        super.create(chamado);
     }
 }
