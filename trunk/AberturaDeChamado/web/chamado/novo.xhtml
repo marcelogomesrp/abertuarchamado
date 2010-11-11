@@ -7,6 +7,9 @@
     
     <ui:define name="content">        
         <h:form>
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table" style="font-size: large"/>
+            </h:panelGroup>
             <h:panelGrid columns="2" >
                 <f:facet name="header">
                     <h:outputText value="Novo chamado" />
