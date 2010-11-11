@@ -14,8 +14,8 @@
                 <f:facet name="header">
                     <h:outputText value="Novo chamado" />
                 </f:facet>
-                <h:outputLabel value="Problema" />
-                <h:inputText value="#{chamadoController.chamado.problema}" required="true" id="problema"/>
+                <h:outputLabel value="Problema *" />
+                <h:inputText value="#{chamadoController.chamado.problema}" required="true" requiredMessage="Obrigatorio informar o problema" id="problema"/>
                 <h:outputLabel value="Descricao" />
                 <h:inputText value="#{chamadoController.chamado.descricao}" id="descricao"/>
             </h:panelGrid>
